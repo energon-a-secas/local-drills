@@ -1,6 +1,4 @@
 
 ## Problem
 
-## Solution
-
-## Preventative Measures
+## Verification

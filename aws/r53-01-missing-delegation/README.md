@@ -9,6 +9,3 @@ Currently there is a new zone called `eph.ehq.cloud` that must be delegated, add
 aws route53 list-hosted-zones
 dig @127.0.0.1 eph.ehq.cloud NS # to test
 ```
-
-## Solution
-

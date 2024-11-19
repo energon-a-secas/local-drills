@@ -10,10 +10,4 @@ touch dev-test.txt
 aws s3api put-object --bucket sample-bucket --key dev-test.txt --body ./dev-test.txt
 ```
 
-## Solution
-
-Maybe here?
-
-## Preventative Measures
-
-Be mindful.
+## Verification
