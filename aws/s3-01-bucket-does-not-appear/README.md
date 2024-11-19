@@ -12,3 +12,6 @@ aws s3api put-object --bucket sample-bucket --key dev-test.txt --body ./dev-test
 ```
 
 # awslocal s3 cp dev-test.txt s3://sample-bucket/
+
+
+<div class="meta_for_parser tablespecs" style="visibility:hidden">{"dataname":"environment","colvar":"varname","colval":"value"}</div>
