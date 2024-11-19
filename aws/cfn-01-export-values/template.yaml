@@ -30,6 +30,7 @@ Parameters:
     Default: test
     ConstraintDescription: "Must be a valid key pair name."
 
+# Needed because reasons
 Resources:
   PlaceholderBucket:
     Type: AWS::S3::Bucket
