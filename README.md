@@ -1,6 +1,6 @@
 # Local Drills
 
-> "Unless you experience challenges firsthand, you won’t truly grow."
+> "Try Harder."
 
 This repository is for those who want to simulate real-world cloud environments on their local machine, whether for learning, testing, or experimentation. If your work environment is too stable or standardized to offer unique challenges, this is your chance to step out of the comfort zone, connect the dots, and sharpen your problem-solving skills.
 
@@ -12,13 +12,13 @@ Our main objective is to provide everything you need to simulate environments li
 Before diving in, here are a few limitations to keep in mind:
 
 - **LocalStack**:
-  - UI:
+  - **UI**:
     - The UI will be available in a extend as a Docker Extension or by using the offical site.
       - The Docker Extension will only help you to check the difference services but without the full extend of the capabilities provided by the site.
-  - Community Image:
+  - **Community Image**:
     - This is the image you'll use unless you have a paid license (starting at $35 USD per user).
     - Not all AWS services are available in the Community tier, but the most common ones are.
-  - IAM Restrictions:
+  - **IAM Restrictions**:
     - In the Community tier, IAM policies are simplified, meaning all resources can access everything. This can affect how you test permissions.
 
 
@@ -56,6 +56,14 @@ To initialize the service, execute the following command:
 docker-compose up
 ```
 
+Once it's up and running, you will be able to see the services:
+
+![Alt text](assets/localstack-tutorial-02.png?raw=true "Services")
+
+- Community
+- System Status:
+  - Running:
+  - Available and Pro:
 
 
 
