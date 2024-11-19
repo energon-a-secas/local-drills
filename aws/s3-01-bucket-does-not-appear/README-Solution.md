@@ -1,3 +1,1 @@
-
-
 Try harder, but with flags that match the bucket policy rules.
