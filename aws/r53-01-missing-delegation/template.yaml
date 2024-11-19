@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Resources:
+  ParentHostedZone:
+    Type: "AWS::Route53::HostedZone"
+    Properties:
+      Name: "ehq.cloud"
+
+  SubdomainHostedZone:
+    Type: "AWS::Route53::HostedZone"
+    Properties:
+      Name: "eph.ehq.cloud"
