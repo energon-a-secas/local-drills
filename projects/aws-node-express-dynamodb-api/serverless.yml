@@ -1,0 +1,72 @@
+service: aws-node-express-dynamodb-api
+
+frameworkVersion: "4"
+
+plugins:
+  - serverless-deployment-bucket
+  - serverless-localstack
+  # Note: Although there's some more popular S3 sync plugins out there, most of them failed on LocalStack with:
+  #   "Error: Non-file stream objects are not supported with SigV4"
+  #     at Object.computeSha256 (node_modules/aws-sdk/lib/util.js:754:23)
+  - serverless-sync-s3
+
+custom:
+  region: us-east-1
+  accountID: '000000000000'
+  localstack:
+    stages: [local]
+    host: http://127.0.0.1
+    debug: true
+  deploymentBucket:
+    local: localstack-test-bucket
+    aws: localstack-test-bucket-53194
+  archiveBucket:
+    local: archive-bucket
+    aws: localstack-demo-archive-bucket-53194
+  syncS3:
+    bucketName: archive-bucket
+    localDir: ./
+
+stages:
+  default:
+    params:
+      tableName: "users-table-${sls:stage}"
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+          Resource:
+            - Fn::GetAtt: [UsersTable, Arn]
+  environment:
+    USERS_TABLE: ${param:tableName}
+
+functions:
+  api:
+    handler: handler.handler
+    events:
+      - httpApi: "*"
+
+resources:
+  Resources:
+    UsersTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        AttributeDefinitions:
+          - AttributeName: userId
+            AttributeType: S
+        KeySchema:
+          - AttributeName: userId
+            KeyType: HASH
+        BillingMode: PAY_PER_REQUEST
+        TableName: ${param:tableName}

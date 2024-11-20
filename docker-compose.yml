@@ -13,3 +13,11 @@ services:
     volumes:
       - "${LOCALSTACK_VOLUME_DIR:-./volume}:/var/lib/localstack"
       - "/var/run/docker.sock:/var/run/docker.sock"
+  serverless-app:
+    container_name: serverless-app
+    image: arm64v8/node
+    working_dir: /usr/src/app
+    volumes:
+        - ./projects/aws-node-express-dynamodb-api:/usr/src/app
+    entrypoint: /bin/bash
+    command: ["-c", "npm install && npm install -g serverless && exec /bin/bash"]
