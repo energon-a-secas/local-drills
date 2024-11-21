@@ -1,11 +1,44 @@
-AWSTemplateFormatVersion: "2010-09-09"
+AWSTemplateFormatVersion: '2010-09-01'
+Description: 'Setup for Route 53 delegation exercise'
+
 Resources:
   ParentHostedZone:
-    Type: "AWS::Route53::HostedZone"
+    Type: 'AWS::Route53::HostedZone'
     Properties:
-      Name: "ehq.cloud"
+      Name: ehq.cloud
+      HostedZoneConfig:
+        Comment: Parent zone for delegation exercise
 
-  SubdomainHostedZone:
-    Type: "AWS::Route53::HostedZone"
+  ChildHostedZone:
+    Type: 'AWS::Route53::HostedZone'
     Properties:
-      Name: "eph.ehq.cloud"
+      Name: eph.ehq.cloud
+      HostedZoneConfig:
+        Comment: Child zone for delegation exercise
+
+  TestRecord:
+    Type: 'AWS::Route53::RecordSet'
+    Properties:
+      HostedZoneId: !Ref ChildHostedZone
+      Name: !Sub 'test.eph.ehq.cloud'
+      Type: A
+      TTL: '300'
+      ResourceRecords:
+        - 192.0.2.44
+
+Outputs:
+  ParentZoneId:
+    Description: ID of the parent hosted zone
+    Value: !Ref ParentHostedZone
+
+  ParentZoneNameServers:
+    Description: Nameservers of the parent zone
+    Value: !Join [',', !GetAtt ParentHostedZone.NameServers]
+
+  ChildZoneId:
+    Description: ID of the child hosted zone
+    Value: !Ref ChildHostedZone
+
+  ChildZoneNameServers:
+    Description: Nameservers of the child zone
+    Value: !Join [',', !GetAtt ChildHostedZone.NameServers]
