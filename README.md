@@ -70,22 +70,16 @@ Performing Chaos Engineering in your company each time a new member starts on-ca
 
 This approach is a close second.
 
-### 1️⃣ Limited Exposure
+- 1️⃣ Limited Exposure:
+    - Once a project passes the implementation phase, you will get less experience because the scope will consist mainly of providing support or, at best, occasional new features.
+    - Unless you actively try to dig and find answers about how and why someone designed the thing you support. You will probably miss most of the nitty-gritty details.
 
-Once a project passes the implementation phase, you will get less experience because the scope will consist mainly of providing support or, at best, occasional new features.
+- 2️⃣ Knowledge Gaps:
+    - While your company might document past issues, reading static documentation about problem-free systems is hardly engaging or educational. These simulations serve as "live documentation," allowing you to learn by doing.
+    - You shouldn't have to wait for something to break to realize that you have knowledge gaps. Stop it, get some help.
 
-Unless you actively try to dig and find answers about how and why someone designed the thing you support. You will probably miss most of the nitty-gritty details.
-
-
-### 2️⃣ Knowledge Gaps
-
-While your company might document past issues, reading static documentation about problem-free systems is hardly engaging or educational. These simulations serve as "live documentation," allowing you to learn by doing.
-
-You shouldn't have to wait for something to break to realize that you have knowledge gaps. Stop it, get some help.
-
-### 3️⃣ Interview Challenges
-
-Sometimes, you haven't had the chance to work with a particular technology, but you have the skills to get up to speed—this is for you.
+- 3️⃣ Interview Challenges:
+    - Sometimes, you haven't had the chance to work with a particular technology, but you have the skills to get up to speed—this is for you.
 
 <br>
 
