@@ -22,13 +22,14 @@
 
 ## Overview
 
-This repository offers a collection of near-real-world simulations for AWS and EKS, designed for troubleshooting (and as challenges). Run them locally without worrying about cloud costs or complex setups by providing the means to replicate them locally by using tools like LocalStack and Minikube.
+This repository offers a collection of near-real-world simulations for AWS and EKS, designed for troubleshooting and as challenges.
+Don't worrying about cloud costs or complex setups, as you will be running everything locally by using tools like LocalStack and Minikube. Definitions for each lab will be provided as well.
 
 Our three goals:
 
-    1️⃣ Give the chance to learn from others by tackling challenges you haven’t encountered yet.
-    2️⃣ Help you understand what you don't know.
-    3️⃣ Double as interview challenges.
+   1️⃣ Give the chance to learn from others by tackling challenges you haven’t encountered yet.
+   2️⃣ Help you understand what you don't know.
+   3️⃣ Double as interview challenges.
 
 Online course labs will rarely throw curveballs your way, so you are welcome!
 
