@@ -27,9 +27,9 @@ Don't worrying about cloud costs or complex setups, as you will be running every
 
 Our three goals:
 
-   1️⃣ Give the chance to learn from others by tackling challenges you haven’t encountered yet.
-   2️⃣ Help you understand what you don't know.
-   3️⃣ Double as interview challenges.
+- 1️⃣ Give the chance to learn from others by tackling challenges you haven’t encountered yet.
+- 2️⃣ Help you understand what you don't know.
+- 3️⃣ Double as interview challenges.
 
 Online course labs will rarely throw curveballs your way, so you are welcome!
 
