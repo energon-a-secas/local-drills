@@ -1,8 +1,8 @@
 # Local Drills
 
-This repository aims to provide a collection of near real-world cloud environment simulations to troubleshoot issues that you can run locally, so no worries of costs or getting things up-and-running.
+This repository offers a collection of near-real-world simulations for AWS and EKS, designed for troubleshooting (and as challenges). Run them locally without worrying about cloud costs or complex setups.
 
-This has three goals:
+Our three goals:
 
 1. Give the chance to learn from others by tackling challenges you haven’t encountered yet.
 2. Help you understand what you don't know.
@@ -16,19 +16,22 @@ More about this at the [Curve Ball](#the-curve-ball) section.
 
 Our main objective is to provide everything you need to simulate environments like **AWS** (using [LocalStack](https://docs.localstack.cloud/)) and **EKS** (using Minikube)
 
-- [AWS Drills](./localstack/README.md)
+- [AWS Drills](./localstack/README.md): 
+    - The folders follow the pattern `SERVICE-NUMBER-SHORT-TITLE`.
+    - Solutions are in README format based on the name of the challenges (folders).
 - [Kubernetes Drills](./minikube/README.md)
 
 ## Drill Structure
 
 Not to gatekeep, but prioritize real cases based on your own experience. Things that have made you think "Wow, I'm glad I know how to do that!" or "If someone can figure this out, I'm hiring them!
 
-- Problem/Request: A thing that happened to you or a request from an user.
+- **Problem/Request**: A thing that happened to you or a request from an user.
     - Context: Information that can help you understand the problem or request.
     - Hint: You may provide some clues to help the player solve the problem.
-- Validation: What does success look like? What command should we run to validate?
-- Solution: Like to the solution file following the pattern `[Solution](../solutions/TYPE/SERVICE-NUMBER-TITLE.md)`
-
+- **Validation**: What does success look like? What command should we run to validate?
+- **Solution**: Like to the solution file following the pattern `[Solution](../solutions/TYPE/SERVICE-NUMBER-TITLE.md)`
+    - Common Mistakes:
+    - Additional Resources: links to explain more behind the issue.
 
 ## The Curve Ball
 
