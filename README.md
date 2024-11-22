@@ -1,7 +1,7 @@
 # Local Drills
 
 <p align="center">
-:zap: Try Harder :zap:
+:bulb: Try Harder
 </p>
 
 <p align="center">
