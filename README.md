@@ -12,6 +12,38 @@ Online course labs will rarely throw curveballs your way, so you are welcome!
 
 More about this at the [Curve Ball](#the-curve-ball) section.
 
+
+<p align="center">
+  <a href="#overview">Overview</a> •
+  <a href="#solutions">Solutions</a> •
+  <a href="#contributing">Contributing</a>
+  <br/>
+  <a href="https://github.com/energon-a-secas/local-drills/tree/main/localstack" target="_blank">☁️ AWS</a> •
+  <a href="https://github.com/energon-a-secas/local-drills/tree/main/minikube" target="_blank">💻 Minikube</a>
+</p>
+
+---
+
+## Overview
+
+### 1️⃣ Limited Exposure
+
+Once a project passes the implementation phase, you will get less experience because the scope will consist mainly of providing support or, at best, occasional new features.
+
+Unless you actively try to dig and find answers about how and why someone designed the thing you support. You will probably miss most of the nitty-gritty details.
+
+
+### 2️⃣ Knowledge Gaps
+
+While your company might document past issues, reading static documentation about problem-free systems is hardly engaging or educational. These simulations serve as "live documentation," allowing you to learn by doing.
+
+You shouldn't have to wait for something to break to realize that you have knowledge gaps. Stop it, get some help.
+
+### 3️⃣ Interview Challenges
+
+Sometimes, you haven't had the chance to work with a particular technology, but you have the skills to get up to speed—this is for you.
+
+
 ## Solutions
 
 Our main objective is to provide everything you need to simulate environments like **AWS** (using [LocalStack](https://docs.localstack.cloud/)) and **EKS** (using Minikube)
@@ -33,29 +65,10 @@ Not to gatekeep, but prioritize real cases based on your own experience. Things 
     - Common Mistakes:
     - Additional Resources: links to explain more behind the issue.
 
-## The Curve Ball
-
-### 1️⃣ Limited Exposure
-
-Once a project passes the implementation phase, you will get less experience because the scope will consist mainly of providing support or, at best, occasional new features.
-
-Unless you actively try to dig and find answers about how and why someone designed the thing you support. You will probably miss most of the nitty-gritty details.
 
 
-### 2️⃣ Knowledge Gaps
-
-While your company might document past issues, reading static documentation about problem-free systems is hardly engaging or educational. These simulations serve as "live documentation," allowing you to learn by doing.
-
-You shouldn't have to wait for something to break to realize that you have knowledge gaps. Stop it, get some help.
-
-### 3️⃣ Interview Challenges
-
-Sometimes, you haven't had the chance to work with a particular technology, but you have the skills to get up to speed—this is for you.
-
-
-## Feedback and Support
+## Contributing
 
 If you encounter issues or have suggestions, feel free to open an issue or submit a pull request. Your feedback is what makes this repository grow!
 
-### Contributors!
 
