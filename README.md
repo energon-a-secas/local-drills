@@ -1,16 +1,8 @@
 # Local Drills
 
-This repository offers a collection of near-real-world simulations for AWS and EKS, designed for troubleshooting (and as challenges). Run them locally without worrying about cloud costs or complex setups.
-
-Our three goals:
-
-    1️⃣ Give the chance to learn from others by tackling challenges you haven’t encountered yet.
-    2️⃣ Help you understand what you don't know.
-    3️⃣ Double as interview challenges.
-
-Online course labs will rarely throw curveballs your way, so you are welcome!
-
-More about this at the [Curve Ball](#the-curve-ball) section.
+<p align="center">
+:zap: Try Harder :zap:
+</p>
 
 
 <p align="center">
@@ -25,6 +17,41 @@ More about this at the [Curve Ball](#the-curve-ball) section.
 ---
 
 ## Overview
+
+This repository offers a collection of near-real-world simulations for AWS and EKS, designed for troubleshooting (and as challenges). Run them locally without worrying about cloud costs or complex setups by providing the means to replicate them locally by using tools like LocalStack and Minikube.
+
+Our three goals:
+
+    1️⃣ Give the chance to learn from others by tackling challenges you haven’t encountered yet.
+    2️⃣ Help you understand what you don't know.
+    3️⃣ Double as interview challenges.
+
+Online course labs will rarely throw curveballs your way, so you are welcome!
+
+More about this at the [Curve Ball](#the-curve-ball) section.
+
+
+## Solutions
+
+- [AWS Drills](./localstack/README.md): using [LocalStack](https://docs.localstack.cloud/).
+    - The folders follow the pattern `SERVICE-NUMBER-SHORT-TITLE`.
+    - Solutions are in README format based on the name of the challenges (folders).
+- [Kubernetes Drills](./minikube/README.md): using Minikube.
+
+## Drill Structure
+
+Not to gatekeep, but prioritize real cases based on your own experience. Things that have made you think "Wow, I'm glad I know how to do that!" or "If someone can figure this out, I'm hiring them!
+
+- **Problem/Request**: A thing that happened to you or a request from an user.
+    - Context: Information that can help you understand the problem or request.
+    - Hint: You may provide some clues to help the player solve the problem.
+- **Validation**: What does success look like? What command should we run to validate?
+- **Solution**: Like to the solution file following the pattern `[Solution](../solutions/TYPE/SERVICE-NUMBER-TITLE.md)`
+    - Common Mistakes:
+    - Additional Resources: links to explain more behind the issue.
+
+
+## The Curve Ball
 
 ### 1️⃣ Limited Exposure
 
@@ -42,29 +69,6 @@ You shouldn't have to wait for something to break to realize that you have knowl
 ### 3️⃣ Interview Challenges
 
 Sometimes, you haven't had the chance to work with a particular technology, but you have the skills to get up to speed—this is for you.
-
-
-## Solutions
-
-Our main objective is to provide everything you need to simulate environments like **AWS** (using [LocalStack](https://docs.localstack.cloud/)) and **EKS** (using Minikube)
-
-- [AWS Drills](./localstack/README.md): 
-    - The folders follow the pattern `SERVICE-NUMBER-SHORT-TITLE`.
-    - Solutions are in README format based on the name of the challenges (folders).
-- [Kubernetes Drills](./minikube/README.md)
-
-## Drill Structure
-
-Not to gatekeep, but prioritize real cases based on your own experience. Things that have made you think "Wow, I'm glad I know how to do that!" or "If someone can figure this out, I'm hiring them!
-
-- **Problem/Request**: A thing that happened to you or a request from an user.
-    - Context: Information that can help you understand the problem or request.
-    - Hint: You may provide some clues to help the player solve the problem.
-- **Validation**: What does success look like? What command should we run to validate?
-- **Solution**: Like to the solution file following the pattern `[Solution](../solutions/TYPE/SERVICE-NUMBER-TITLE.md)`
-    - Common Mistakes:
-    - Additional Resources: links to explain more behind the issue.
-
 
 
 ## Contributing
