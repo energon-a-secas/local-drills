@@ -40,6 +40,8 @@ More about this at the [Curve Ball Approach](#the-curve-ball-approach) section.
 
 ## Solutions
 
+Except to use Docker!
+
 - [AWS Drills](./localstack/README.md): using [LocalStack](https://docs.localstack.cloud/).
     - The folders follow the pattern `SERVICE-NUMBER-SHORT-TITLE`.
     - Solutions are in README format based on the name of the challenges (folders).
