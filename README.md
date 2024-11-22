@@ -55,9 +55,10 @@ Not to gatekeep, but prioritize real cases based on your own experience. Things 
     - Context: Information that can help you understand the problem or request.
     - Hint: You may provide some clues to help the player solve the problem.
 - 🧪 **Validation**: What does success look like? What command should we run to validate?
-- 💉 **Solution**: Like to the solution file following the pattern `[Solution](../solutions/TYPE/SERVICE-NUMBER-TITLE.md)`
-    - Common Mistakes:
-    - Additional Resources: links to explain more behind the issue.
+- 💉 **Solution**: Links to the solutions README.
+    - File: linked like this `[Solution](../solutions/TYPE/SERVICE-NUMBER-TITLE.md)`, it may contain other sections:
+        - Common Mistakes: assumptions or other things.
+        - Additional Resources: links to explain more behind the issue.
 
 <br>
 
