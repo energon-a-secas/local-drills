@@ -14,8 +14,8 @@
   <a href="#solutions">Solutions</a> •
   <a href="#contributing">Contributing</a>
   <br/>
-  <a href="https://github.com/energon-a-secas/local-drills/tree/main/localstack" target="_blank">☁️ AWS</a> •
-  <a href="https://github.com/energon-a-secas/local-drills/tree/main/minikube" target="_blank">💻 Minikube</a>
+  <a href="https://github.com/energon-a-secas/local-drills/tree/main/aws" target="_blank">☁️ AWS</a> •
+  <a href="https://github.com/energon-a-secas/local-drills/tree/main/kubernetes" target="_blank">💻 Minikube</a>
 </p>
 
 ---
