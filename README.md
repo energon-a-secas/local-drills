@@ -28,8 +28,9 @@ Our three goals:
 
 Online course labs will rarely throw curveballs your way, so you are welcome!
 
-More about this at the [Curve Ball](#the-curve-ball) section.
+More about this at the [Curve Ball Approach](#the-curve-ball-approach) section.
 
+<br>
 
 ## Solutions
 
@@ -50,8 +51,9 @@ Not to gatekeep, but prioritize real cases based on your own experience. Things 
     - Common Mistakes:
     - Additional Resources: links to explain more behind the issue.
 
+<br>
 
-## The Curve Ball
+## The Curve Ball Approach
 
 ### 1️⃣ Limited Exposure
 
@@ -70,6 +72,7 @@ You shouldn't have to wait for something to break to realize that you have knowl
 
 Sometimes, you haven't had the chance to work with a particular technology, but you have the skills to get up to speed—this is for you.
 
+<br>
 
 ## Contributing
 
