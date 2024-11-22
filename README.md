@@ -52,11 +52,13 @@ More about this at the [Curve Ball Approach](#the-curve-ball-approach) section.
 Not to gatekeep, but prioritize real cases based on your own experience. Things that have made you think "Wow, I'm glad I know how to do that!" or "If someone can figure this out, I'm hiring them!
 
 - 🔎 **Problem/Request**: A thing that happened to you or a request from an user.
-    - Context: Information that can help you understand the problem or request.
-    - Hint: You may provide some clues to help the player solve the problem.
+    - Optional Sections:
+        - Context: Information that can help you understand the problem or request.
+        - Hint: You may provide some clues to help the player solve the problem.
 - 🧪 **Validation**: What does success look like? What command should we run to validate?
 - 💉 **Solution**: Links to the solutions README.
-    - File: linked like this `[Solution](../solutions/TYPE/SERVICE-NUMBER-TITLE.md)`, it may contain other sections:
+    - File: linked like this `[Solution](../solutions/TYPE/SERVICE-NUMBER-TITLE.md)`.
+    - Optional Sections:
         - Common Mistakes: assumptions or other things.
         - Additional Resources: links to explain more behind the issue.
 
