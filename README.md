@@ -4,6 +4,10 @@
 :zap: Try Harder :zap:
 </p>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/energon-a-secas/local-drills/refs/heads/main/assets/localstack-logo-modified.png" alt="Banner">
+</p>
+
 
 <p align="center">
   <a href="#overview">Overview</a> •
