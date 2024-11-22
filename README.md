@@ -23,7 +23,8 @@
 ## Overview
 
 This repository offers a collection of near-real-world simulations for AWS and EKS, designed for troubleshooting and as challenges.
-Don't worrying about cloud costs or complex setups, as you will be running everything locally by using tools like LocalStack and Minikube. Definitions for each lab will be provided as well.
+
+Don't worry about cloud costs; everything you do will be executed locally using tools like LocalStack and Minikube.
 
 Our three goals:
 
@@ -31,7 +32,7 @@ Our three goals:
 - 2️⃣ Help you understand what you don't know.
 - 3️⃣ Double as interview challenges.
 
-Online course labs will rarely throw curveballs your way, so you are welcome!
+Online course labs rarely throw curveballs your way. We want to make a difference by providing interesting cases that may help you.
 
 More about this at the [Curve Ball Approach](#the-curve-ball-approach) section.
 
@@ -44,7 +45,7 @@ More about this at the [Curve Ball Approach](#the-curve-ball-approach) section.
     - Solutions are in README format based on the name of the challenges (folders).
 - [Kubernetes Drills](./minikube/README.md): using Minikube.
 
-## Drill Structure
+## Drills Structure
 
 Not to gatekeep, but prioritize real cases based on your own experience. Things that have made you think "Wow, I'm glad I know how to do that!" or "If someone can figure this out, I'm hiring them!
 
@@ -59,6 +60,10 @@ Not to gatekeep, but prioritize real cases based on your own experience. Things 
 <br>
 
 ## The Curve Ball Approach
+
+Performing Chaos Engineering in your company each time a new member starts on-call duties or begins the onboarding isn't feasible to test their abilities or wait for something to happen to help them grow.
+
+This approach is a close second.
 
 ### 1️⃣ Limited Exposure
 
