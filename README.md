@@ -4,9 +4,9 @@ This repository offers a collection of near-real-world simulations for AWS and E
 
 Our three goals:
 
-1. Give the chance to learn from others by tackling challenges you haven’t encountered yet.
-2. Help you understand what you don't know.
-3. Double as interview challenges.
+    1️⃣ Give the chance to learn from others by tackling challenges you haven’t encountered yet.
+    2️⃣ Help you understand what you don't know.
+    3️⃣ Double as interview challenges.
 
 Online course labs will rarely throw curveballs your way, so you are welcome!
 
@@ -35,20 +35,20 @@ Not to gatekeep, but prioritize real cases based on your own experience. Things 
 
 ## The Curve Ball
 
-### Limited Exposure
+### 1️⃣ Limited Exposure
 
 Once a project passes the implementation phase, you will get less experience because the scope will consist mainly of providing support or, at best, occasional new features.
 
 Unless you actively try to dig and find answers about how and why someone designed the thing you support. You will probably miss most of the nitty-gritty details.
 
 
-### Knowledge Gaps
+### 2️⃣ Knowledge Gaps
 
 While your company might document past issues, reading static documentation about problem-free systems is hardly engaging or educational. These simulations serve as "live documentation," allowing you to learn by doing.
 
 You shouldn't have to wait for something to break to realize that you have knowledge gaps. Stop it, get some help.
 
-### Interview Challenges
+### 3️⃣ Interview Challenges
 
 Sometimes, you haven't had the chance to work with a particular technology, but you have the skills to get up to speed—this is for you.
 
