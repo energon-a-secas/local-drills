@@ -1,0 +1,8 @@
+include:
+  - project: 'energonhq/platform/pipelines/gitlab'
+    file: 'templates/docker-build.yml'
+
+stages:
+  - build
+  - push
+  - release

@@ -1,0 +1,19 @@
+variables:
+  EKS_NAMESPACE: default
+
+.eks-pods:
+  recent-logs:
+    - POD_DEPLOY_STATUS=$(kubectl get pods -o wide --sort-by=.metadata.creationTimestamp | tac | grep $EKS_DEPLOYMENT_NAME | awk {'print$1'} | awk 'FNR <= 1')
+    - kubectl logs pod/$POD_DEPLOY_STATUS > $REPORT_FILE
+
+.eks-deployment:
+  set-configurations:
+    - aws eks update-kubeconfig --name $AWS_CLUSTER_NAME --region $EKS_CLUSTER_REGION
+    - context=$(kubectl config current-context)
+    - kubectl config set-context $context --namespace=$EKS_NAMESPACE
+  update-docker-image:
+    - aws eks update-kubeconfig --name $AWS_CLUSTER_NAME --region $EKS_CLUSTER_REGION
+    - context=$(kubectl config current-context)
+    - kubectl config set-context $context --namespace=$EKS_NAMESPACE
+    - kubectl set image deployment/$EKS_DEPLOYMENT_NAME $EKS_DEPLOYMENT_NAME=$CONTAINER_IMAGE
+    # if kubectl rollout status --timeout=40s deployment $DEPLOYNAME ; then echo "Deploy Success!!" ; else echo "Build $CI_PIPELINE_IID has failed to deploy, Please reference Kibana.. Rolling Back" ; kubectl rollout undo deployment $DEPLOYNAME ; exit 1; fi

@@ -12,6 +12,7 @@
 <p align="center">
   <a href="#overview">Overview</a> •
   <a href="#solutions">Solutions</a> •
+  <a href="#templates">Templates</a> •
   <a href="#contributing">Contributing</a>
   <br/>
   <a href="https://github.com/energon-a-secas/local-drills/tree/main/aws" target="_blank">☁️ AWS</a> •
@@ -48,6 +49,12 @@ Except to use Docker!
 - [Kubernetes Drills](./minikube/README.md): using Minikube.
 
 <br>
+
+### Templates
+
+- Docker
+- Gitlab
+- Terraform
 
 ## Drills Structure
 

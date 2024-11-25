@@ -1,0 +1,71 @@
+include:
+  - local: anchors/aws.yml
+  - local: anchors/git.yml
+
+variables:
+  DEFAULT_DOCKER_IMAGE: energ0n/base-agent:latest
+  ENVIRONMENT: $CI_ENVIRONMENT_NAME
+  TF_PATH: ./                                                                     # Optional
+  TF_BACKEND_PATH: ./environments/${ENVIRONMENT}/${REGION}/backend.tfvars         # Required
+  TF_VARIABLES_PATH: ./environments/${ENVIRONMENT}/${REGION}/variables.tfvars     # Required
+  TF_ADDITIONAL_VARS: ""                                                          # Optional
+  PLAN: plan.tfplan
+  JSON_PLAN_FILE: tfplan.json
+
+.configure_agent:
+  image: $DEFAULT_DOCKER_IMAGE
+  before_script:
+    - !reference [.aws-auth, iam-role]
+    - !reference [.git, configure-credentials]
+    - cd $TF_PATH
+    - curl -L https://raw.githubusercontent.com/warrensbox/terraform-switcher/release/install.sh | bash
+    - tfswitch
+    - terraform init -backend-config=$TF_BACKEND_PATH
+
+.validate:
+  extends: .configure_agent
+  image: $DEFAULT_DOCKER_IMAGE
+  stage: lint
+  script:
+    - terraform validate
+    - terraform fmt -check=true -diff -recursive
+
+.plan:
+  extends: .configure_agent
+  image: $DEFAULT_DOCKER_IMAGE
+  stage: plan
+  script:
+    - shopt -s expand_aliases
+    - alias convert_report="jq -r '([.resource_changes[].change.actions?]|flatten)|{\"create\":(map(select(.==\"create\"))|length),\"update\":(map(select(.==\"update\"))|length),\"delete\":(map(select(.==\"delete\"))|length)}'"
+    - >-
+      terraform plan
+      -out=$PLAN
+      -lock=true
+      -lock-timeout=0s
+      -input=false
+      -refresh=true
+      -var-file=$TF_VARIABLES_PATH
+      $ADDITIONAL_FLAGS
+    - terraform show --json $PLAN | convert_report > $JSON_PLAN_FILE
+  artifacts:
+    name: plan
+    paths:
+      - $TF_PATH/$PLAN
+    reports:
+      terraform: $TF_PATH/$JSON_PLAN_FILE
+
+.apply:
+  extends: .configure_agent
+  image: $DEFAULT_DOCKER_IMAGE
+  stage: apply
+  script:
+    - >-
+      terraform apply
+      -lock=true
+      -lock-timeout=0s
+      -input=false
+      -auto-approve=true
+      -refresh=true
+      $PLAN
+  artifacts:
+    name: $CI_COMMIT_REF_SLUG

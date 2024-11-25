@@ -1,0 +1,16 @@
+{
+  "CPUUtilization": {
+    "period": "120",
+    "stat": "Average",
+    "threshold": "80",
+    "return_data": "true",
+    "id": "m1"
+  },
+  "MemoryUtilization": {
+    "period": "120",
+    "stat": "Average",
+    "threshold": "80",
+    "return_data": "true",
+    "id": "m1"
+  }
+}

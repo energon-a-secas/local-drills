@@ -1,0 +1,18 @@
+variables:
+  SLACK_USERNAME: "TM-BOTOTO"
+  SLACK_ICON: "gitlab"
+  SLACK_MESSAGE: "Default text that you didnt overwrite"
+  SLACK_CHANNEL: "talent-notifications-nonprod"
+
+.slack-api:
+  post-message:
+    - >
+      curl -X POST -H "Content-type: application/json" 
+      --data "{\"username\":\"$SLACK_USERNAME\",\"icon_emoji\":\"$SLACK_ICON\",\"channel\":\"$SLACK_CHANNEL\",\"text\":\"$SLACK_MESSAGE\"}" $SLACK_WEBHOOK
+    
+    #curl -H "Content-type: application/json" --data '{"username": $SLACK_USERNAME, "icon_emoji": $SLACK_ICON, "channel": $SLACK_CHANNEL, "blocks":[{"type": "section","text": {"type": "mrkdwn","text": "'"$TEXT"'"}}]}' -H "Authorization: Bearer $SLACK_TOKEN" -X POST https://slack.com/api/chat.postMessage
+  post-message-function:
+    - >
+      slack-to() {
+        curl -X POST -H "Content-type: application/json" --data "{\"channel\":\"$1\",\"text\":\"$2\",\"username\":\"$SLACK_USERNAME\",\"icon_emoji\":\"$SLACK_ICON\"}" $SLACK_WEBHOOK
+      }

@@ -1,0 +1,33 @@
+.aws-auth:
+  iam-role:
+    - response=$(aws sts assume-role --role-arn ${AWS_DEPLOY_ROLE} --role-session-name ${CI_PROJECT_NAME}-${CI_PIPELINE_IID} --external-id ${AWS_EXTERNAL_ID})
+    - export AWS_SECRET_ACCESS_KEY=$(echo $response | jq -r '.Credentials.SecretAccessKey')
+    - export AWS_SESSION_TOKEN=$(echo $response | jq -r '.Credentials.SessionToken')
+    - export AWS_ACCESS_KEY_ID=$(echo $response | jq -r '.Credentials.AccessKeyId')
+    - aws sts get-caller-identity
+  
+  configure-credentials:
+    - response=$(aws sts assume-role --role-arn ${DEPLOYMENT_ROLE} --role-session-name ${CI_PROJECT_NAME}-${CI_PIPELINE_IID} --external-id ${EXTERNAL_ID})
+    - export AWS_SECRET_ACCESS_KEY=$(echo $response | jq -r '.Credentials.SecretAccessKey')
+    - export AWS_SESSION_TOKEN=$(echo $response | jq -r '.Credentials.SessionToken')
+    - export AWS_ACCESS_KEY_ID=$(echo $response | jq -r '.Credentials.AccessKeyId')
+    - aws sts get-caller-identity
+
+.aws-functions:
+  s3-methods:
+    - >
+      s3-upload() {
+        curl -X POST -H "Content-type: application/json" --data "{\"channel\":\"$1\",\"text\":\"$2\",\"username\":\"$SLACK_USERNAME\",\"icon_emoji\":\"$SLACK_ICON\"}" $SLACK_WEBHOOK
+      }
+    - >
+      s3-sync(){
+        aws s3 sync s3://$1 $2
+      }
+    - >
+      s3-copy() {
+        aws s3 cp $1 s3://$2
+      }
+    - >
+      s3-presign-url(){
+        aws s3 presign s3://$1 --expires-in $2
+      }

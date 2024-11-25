@@ -1,0 +1,13 @@
+variables:
+  CI_REGISTRY_IMAGE: index.docker.io/energ0n/$CI_PROJECT_NAME
+  IMAGE_BRANCH: $CI_REGISTRY_IMAGE:$CI_COMMIT_BRANCH # Just to have a clear association with an MR
+  IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA # Longer commit hash makes it hard to read it
+
+services:
+  - docker:dind
+
+.docker:
+  build-push:
+    - echo -n $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY # Instead of using -p
+    - docker build --pull -t "$CI_REGISTRY_IMAGE" . --tag $IMAGE_TAG # Instead of building an image from scratch, starts from the latest available image
+    - docker push $IMAGE_TAG
