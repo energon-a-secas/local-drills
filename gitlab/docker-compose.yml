@@ -1,0 +1,10 @@
+---
+  services:
+    gitlab-ci:
+      image: energonhq/nodejs:9
+      working_dir: /local
+      # Missing Git Commit data
+      volumes:
+          - $PWD/gitlab-00-tutorial:/local
+      entrypoint: /bin/bash
+      #command: ["gitlab-ci-local", "--cwd", "gitlab-00-tutorial"]
