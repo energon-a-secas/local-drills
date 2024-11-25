@@ -1,0 +1,8 @@
+---
+  version: '3'
+  services:
+    local-test:
+      build: .
+      tty: true
+      entrypoint: /bin/bash
+      working_dir: /test
