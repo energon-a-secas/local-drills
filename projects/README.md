@@ -1,13 +1,15 @@
+# About the Projects
 
-
-`softwareupdate --install-rosetta --agree-to-license`
+## Prerequisites
 
 ```bash
-let vmConfiguration = VZVirtualMachineConfiguration()
-vmConfiguration.isRosettaEnabled = true
+serverless plugin install -n serverless-localstack
+serverless plugin install -n serverless-deployment-bucket
+serverless plugin install -n serverless-sync-s3
 ```
 
-  15  serverless plugin install -n serverless-localstack
-   16  serverless plugin install -n serverless-deployment-bucket
-   17  serverless plugin install -n serverless-sync-s3
-   
+
+## Projects
+
+- LocalStack Demo: Web application with asynchronous request processing. Quite the view.
+  - Original repository [here](https://github.com/localstack/localstack-demo).
