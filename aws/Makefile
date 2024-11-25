@@ -11,7 +11,7 @@ install:
 	@docker extension install localstack/localstack-docker-desktop:0.5.3
 
 run:
-	@docker-compose run --name=localstack localstack
+	@docker-compose run --rm --name=localstack localstack
 
 run-app:
 	@docker-compose run --rm --name=serverless-app serverless-app
